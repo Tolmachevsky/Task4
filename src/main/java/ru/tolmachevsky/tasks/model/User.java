@@ -1,8 +1,6 @@
 package ru.tolmachevsky.tasks.model;
 
 
-
-
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -11,7 +9,7 @@ import java.util.Date;
 @Entity // This tells Hibernate to make a table out of this class
 public class User {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     private String name;

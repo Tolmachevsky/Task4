@@ -21,8 +21,8 @@ public class UserServiceImp implements UserService {
 
     @Transactional(readOnly = true)
     @Override
-    public Iterable <User> getAllUsers() {
-        return  userRepository.findAll();
+    public Iterable<User> getAllUsers() {
+        return userRepository.findAll();
     }
 
     @Transactional
