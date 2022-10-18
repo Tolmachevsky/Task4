@@ -21,14 +21,19 @@ public class UserServiceImp implements UserService {
 
     @Transactional(readOnly = true)
     @Override
-    public Iterable<User> getAllUsers() {
+    public Iterable<User> findAll() {
         return userRepository.findAll();
     }
 
-    @Transactional
     @Override
-    public void dropAllTables() {
-        userRepository.deleteAll();
+    public User findById(Integer id) {
+        return userRepository.findById(id).get();
     }
+
+    @Override
+    public void deleteUserById(Integer id) {
+        userRepository.deleteById(id);
+    }
+
 
 }

@@ -6,8 +6,11 @@ import ru.tolmachevsky.tasks.model.User;
 public interface UserService {
     void save(User user);
 
-    public Iterable<User> getAllUsers();
+    Iterable<User> findAll();
 
-    void dropAllTables();
+    User findById(Integer id);
+
+    void deleteUserById(Integer id);
+
 
 }
